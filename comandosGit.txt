@@ -10,14 +10,18 @@ $ checkout //traer cambios realizado
 ---------------------------------------------------------------------------------------------
 $ git init //inicializar el repositorio
 $ git config --list //muestra la lista de configuracion de git
-$ git config --list --show-origin//rutas de acceso a la configuración de git
+$ git config --global user.name "Nombre"// Configura nombre usuario
+$ git config --global user.email "email"// Configura email usuario
+$ git status// Muestra el estado de actual de los archivos ubicados en el área de staging
 ---------------------------------------------------------------------------------------------
 $ git add archivo.extencion //guardar archivo en staging
 $ git add .// Agregar todos los cambios los archivos de la carpeta en la que nos encontramos
-$ git commit -m “Mensaje”// Agregamos los cambios para el repositorio #si no agregamos mensaje, 
-                            entra en el vim , salir con: esc + shift + "z""z
+$ git commit -m “Mensaje”// Agregamos los cambios para el repositorio
 $ git commit -am//funciona si les ha hecho $git add previamente.
-                Agrega todos los archivos desde el directorio de trabajo al repositorio local
+                  Agrega todos los archivos desde el directorio de trabajo al repositorio local
+$ git commit// Abrirá el editor Vim para poder agregar un comentario, siempre es obligatorio
+               agregar un comentario para el commit. Para poder editar el comit usar "ESC i".
+               Para guardar cambios ESC + SHIFT + Z Z
 ----------------------------------------------------------------------------------------------
 #GITHUB
 $ git clone url_del_servidor_remoto//permite descargar los archivos de la última versión
@@ -31,8 +35,7 @@ $ git push origin master// Comando para enviar los cambios del repositorio local
 $ git fetch//trae actualizaciones del repositorio remoto y lo guarda en nuestro repositorio local.
 $ git merge//trae los últimos cambios del servidor remoto a nuestro directorio de trabajo.
 ----------------------------------------------------------------------------------------------
-$ git status // visualizar cambios
-$ git log archivo.extencion //historial de cambios con detalles
+$ git log// Muestra el historial detallado con commit e id, de todos los commits en dicho repositorio
 $ git diff commitA commitB //comparar versiones
 $ arbolito// alias para ver historial del proyecto
 ----------------------------------------------------------------------------------------------
@@ -63,6 +66,9 @@ $ git checkout -nombre de la rama-//el head de traslada de una rama a otra.
 $ git checkout -b rama// Crea una rama y nos mueve a ella automáticamente, 
                         Es decir, es la combinación de git brach y git checkout al mismo tiempo.
 $ git merge “nombre de la rama que se quiere fusionar”// une dos ramas del repositorio
+$ git rebase <nombre-rama-a-desaparecer>// aplica los cambios a la rama sin que los mismos se registren
+$ git rebase <rama-principal>//
+$ git rebase --abort// eiminar cambios
 ---------------------------------------------------------------------------------------------
 #CONFIGURACION LLAVES DE GITHUB : URL Y SSH
 $ git remote add origin URL// guardar la url del repositorio de github
