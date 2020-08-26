@@ -20,12 +20,14 @@ $ git commit -am//funciona si les ha hecho $git add previamente.
                 Agrega todos los archivos desde el directorio de trabajo al repositorio local
 ----------------------------------------------------------------------------------------------
 #GITHUB
+$ git clone url_del_servidor_remoto//permite descargar los archivos de la última versión
+                             de la rama principal y todo el historial de cambios en la carpeta de trabajo y repositorio local
+$ git remote add origin "llave ssh"/crear conexion con repositorio externo
 $ git pull origin master//traer repositorio remoto de github al local
 $ git pull origin master --alow-unrelated-histories// trae la versión del repositorio remoto y 
                 hacer merge para crear un commit con los archivos de ambas partes.
 $ git push origin master// Comando para enviar los cambios del repositorio local al repositorio remoto de github
-$ git clone url_del_servidor_remoto//permite descargar los archivos de la última versión
-                             de la rama principal y todo el historial de cambios en la carpeta de trabajo y repositorio local
+
 $ git fetch//trae actualizaciones del repositorio remoto y lo guarda en nuestro repositorio local.
 $ git merge//trae los últimos cambios del servidor remoto a nuestro directorio de trabajo.
 ----------------------------------------------------------------------------------------------
