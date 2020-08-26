@@ -1,3 +1,4 @@
+#### COMANDOS GENERALES #########
 $ pwd //ubicacion actual
 $ mkdir //crear directorio (nueva carpeta)
 $ touch archivo.extencion//crear archivo vacio
@@ -7,13 +8,14 @@ $ history //historial de comandos utilizados durante esa sesion
 $ rm archivo.extencion //eliminacion de archivo
 $ comando --help //ayuda sobre el comando
 $ checkout //traer cambios realizado
+$ alias nombreNuevoComando="Comando a convertir"// Crear un alias para resumir comandos que sean muy extenso
 ---------------------------------------------------------------------------------------------
+######## COMANDOS GIT #########################
 $ git init //inicializar el repositorio
 $ git config --list //muestra la lista de configuracion de git
 $ git config --global user.name "Nombre"// Configura nombre usuario
 $ git config --global user.email "email"// Configura email usuario
-$ git status// Muestra el estado de actual de los archivos ubicados en el área de staging
----------------------------------------------------------------------------------------------
+$ git status// Muestra el estado de actual de los archivos ubicados en el área de stage
 $ git add archivo.extencion //guardar archivo en staging
 $ git add .// Agregar todos los cambios los archivos de la carpeta en la que nos encontramos
 $ git commit -m “Mensaje”// Agregamos los cambios para el repositorio
@@ -23,10 +25,11 @@ $ git commit// Abrirá el editor Vim para poder agregar un comentario, siempre e
                agregar un comentario para el commit. Para poder editar el comit usar "ESC i".
                Para guardar cambios ESC + SHIFT + Z Z
 ----------------------------------------------------------------------------------------------
-#GITHUB
+########## COMANDOS GITHUB #################
 $ git clone url_del_servidor_remoto//permite descargar los archivos de la última versión
                              de la rama principal y todo el historial de cambios en la carpeta de trabajo y repositorio local
-$ git remote add origin "llave ssh"/crear conexion con repositorio externo
+$ git remote add origin "llave ssh" o "url"/crear conexion con repositorio externo
+$ git remote set-url origin url-ssh-del-repositorio-en-github// Con esto estaremos cambiando la url del repositorio en github.
 $ git pull origin master//traer repositorio remoto de github al local
 $ git pull origin master --alow-unrelated-histories// trae la versión del repositorio remoto y 
                 hacer merge para crear un commit con los archivos de ambas partes.
@@ -37,8 +40,27 @@ $ git merge//trae los últimos cambios del servidor remoto a nuestro directorio 
 ----------------------------------------------------------------------------------------------
 $ git log// Muestra el historial detallado con commit e id, de todos los commits en dicho repositorio
 $ git diff commitA commitB //comparar versiones
-$ arbolito// alias para ver historial del proyecto
+$ git log --all --graph --decorate --oneline// ver el historial de cambios y ramas de forma más gráfica.
 ----------------------------------------------------------------------------------------------
+#RAMAS
+$ git branch -nombre de la rama-// crea una nueva rama
+$ git branch -D nombreRama// se utiliza para eliminar ramas en git
+$ git checkout -nombre de la rama-//el head de traslada de una rama a otra.
+$ git checkout -b rama// Crea una rama y nos mueve a ella automáticamente, 
+                        Es decir, es la combinación de git brach y git checkout al mismo tiempo.
+$ git merge “nombre de la rama que se quiere fusionar”// une dos ramas del repositorio
+$ git rebase <nombre-rama-a-desaparecer>// aplica los cambios a la rama sin que los mismos se registren
+$ git rebase <rama-principal>//
+$ git rebase --abort// eiminar cambios
+
+$ git stash// guardar el trabajo el cual no es necesario hacer un commit aun 
+$ git stash list// muestra los archivos del stash
+$ git stash pop// trae los cambios que se encuentran guardados en el stash
+$ git stash drop// elimina los archivos del stash
+
+$ git clean -dry -run// muestra los archivos nuevos a eliminar
+$ git clean -f// elimina los archivos mostrados
+------------------------------------------------------------------------------------------------
 #VOLVER EN EL TIEMPO
 --nos deja ir, mirar, pasear y volver.
 $ git checkout + ID del commit //Podemos volver a cualquier versión anterior de un archivo específico 
@@ -60,20 +82,9 @@ $ git reset HEAD// sacar archivos del área de Staging. No para borrarlos ni nad
                     solo para que los últimos cambios de estos archivos no se envíen al último commit
                      a menos que cambiemos de opinión y los incluyamos de nuevo en staging con git add
 ---------------------------------------------------------------------------------------------
-#RAMAS
-$ git branch -nombre de la rama-// crea una nueva rama
-$ git checkout -nombre de la rama-//el head de traslada de una rama a otra.
-$ git checkout -b rama// Crea una rama y nos mueve a ella automáticamente, 
-                        Es decir, es la combinación de git brach y git checkout al mismo tiempo.
-$ git merge “nombre de la rama que se quiere fusionar”// une dos ramas del repositorio
-$ git rebase <nombre-rama-a-desaparecer>// aplica los cambios a la rama sin que los mismos se registren
-$ git rebase <rama-principal>//
-$ git rebase --abort// eiminar cambios
+
 ---------------------------------------------------------------------------------------------
-#CONFIGURACION LLAVES DE GITHUB : URL Y SSH
-$ git remote add origin URL// guardar la url del repositorio de github
-$ git remote -v// verificar que la URL se haya guardado corretamente, nos deberia traer la url 
-                donde hariamos el fecht y el push
+########### CONFIGURACION LLAVES DE GITHUB: SSH ###############33
 Generar una nueva llave SSH: (Windows O Linux)
 $ ssh-keygen -t rsa -b 4096 -C "youremail@example.com"
 Comprobar proceso y agregarlo (Windows)
