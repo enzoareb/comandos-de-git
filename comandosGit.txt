@@ -24,6 +24,7 @@ $ git commit -am//funciona si les ha hecho $git add previamente.
 $ git commit// Abrirá el editor Vim para poder agregar un comentario, siempre es obligatorio
                agregar un comentario para el commit. Para poder editar el comit usar "ESC i".
                Para guardar cambios ESC + SHIFT + Z Z
+$ git commit --amend// permite remendar el commit anterior agregando cambios al archivo
 ----------------------------------------------------------------------------------------------
 ########## COMANDOS GITHUB #################
 $ git clone url_del_servidor_remoto//permite descargar los archivos de la última versión
@@ -43,8 +44,11 @@ $ git diff commitA commitB //comparar versiones
 $ git log --all --graph --decorate --oneline// ver el historial de cambios y ramas de forma más gráfica.
 ----------------------------------------------------------------------------------------------
 #RAMAS
+$ gitk// grafico de ramas del proyecyo
 $ git branch -nombre de la rama-// crea una nueva rama
 $ git branch -D nombreRama// se utiliza para eliminar ramas en git
+$ git branch// mostrar ramas remotas
+$ git branch// mostrar ramas del servidor
 $ git checkout -nombre de la rama-//el head de traslada de una rama a otra.
 $ git checkout -b rama// Crea una rama y nos mueve a ella automáticamente, 
                         Es decir, es la combinación de git brach y git checkout al mismo tiempo.
