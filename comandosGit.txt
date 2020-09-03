@@ -88,12 +88,23 @@ $ git reset HEAD// sacar archivos del área de Staging. No para borrarlos ni nad
 ---------------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------------
-########### CONFIGURACION LLAVES DE GITHUB: SSH ###############33
-Generar una nueva llave SSH: (Windows O Linux)
+########### CONFIGURACION LLAVES DE GITHUB: SSH ###############
+primer  paso: configurar email
+$ git init //inicializar el repositorio
+$ git config --global user.name "Nombre"// Configura nombre usuario
+$ git config --global user.email "email"// Configura email usuario
+
+segundo paso: Generar una nueva llave SSH: (Windows O Linux)
 $ ssh-keygen -t rsa -b 4096 -C "youremail@example.com"
-Comprobar proceso y agregarlo (Windows)
+Comprobar proceso 
 eval $(ssh-agent -s)
 ssh-add ~/.ssh/id_rsa
+
+tercer paso: agregar llave publica a github
+$ cat ~/.ssh/is_rsa.pub
+copiar texto e ir a la configuracion de github
+en el panel izquierdo elegir pestaña de llaves ssh
+y agregar llave publica 
 ------------------------------------------------------------------------------------------------
 #TAGS 
 $ git tag -a nombre-del-tag id-del-commit// Crear un nuevo tag y asignarlo a un commit 
