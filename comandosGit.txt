@@ -100,3 +100,13 @@ $ git tag -a nombre-del-tag id-del-commit// Crear un nuevo tag y asignarlo a un 
 $ git tag -d nombre-del-tag// Borrar un tag en el repositorio local
 $ git tag o git show-ref --tags// Listar los tags de nuestro repositorio local
 $ git push origin --tags//Publicar en el repositorio remoto un tag
+
+¿GitHub es?
+¿Las llaves públicas son?
+Se crean dos archivos cuando creas una llave pública y privada para SSH, ¿cuál es la extensión de la llave privada?
+En un repositorio público en GitHub, ¿qué puede hacer los colaboradores?
+El dueño de un repositorio al ver un pull request puede:
+Cuando hago un fork de un proyecto en GitHub, ¿lo que logro es?
+¿Cuándo deberías usar cherry-pick?
+Estás en la rama master y quieres mandar los últimos cambios que guardaste con git stash a la rama retomando-los-cambios (la rama no ha sido creada aún). ¿Cuál de las siguientes soluciones es incorrecta?
+¿Cuál es la diferencia entre git rm y git reset HEAD?
