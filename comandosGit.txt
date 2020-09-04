@@ -1,6 +1,10 @@
 #### COMANDOS GENERALES #########
 $ pwd //ubicacion actual
 $ mkdir //crear directorio (nueva carpeta)
+$ cp// copiar
+$ mv// mover
+$ rmdir// eliminar directorio
+$ rm -r// eliminar directorio y su contenido
 $ touch archivo.extencion//crear archivo vacio
 $ cat archivo.extencion//muestra el contenido del archivo
 $ ls //listado de carpetas en donde me encuentro 
@@ -9,6 +13,7 @@ $ rm archivo.extencion //eliminacion de archivo
 $ comando --help //ayuda sobre el comando
 $ checkout //traer cambios realizado
 $ alias nombreNuevoComando="Comando a convertir"// Crear un alias para resumir comandos que sean muy extenso
+$ sudo /opt/lampp/lampp start// iniciar servidor de base de datos
 ---------------------------------------------------------------------------------------------
 ######## COMANDOS GIT #########################
 $ git init //inicializar el repositorio
